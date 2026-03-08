@@ -1,19 +1,35 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFileSync, writeFileSync } from "fs";
-import path from "path";
+import { kv } from "@vercel/kv";
 
-const NEWS_FILE = path.join(process.cwd(), "data", "news.json");
+const NEWS_KEY = "gta6:news";
+const MAX_ITEMS = 100;
 
-function readNews() {
+export interface NewsItem {
+  id: string;
+  date: string;
+  badge: string;
+  title: string;
+  body: string;
+  source: string;
+  sourceUrl: string;
+  autoAdded?: boolean;
+}
+
+export async function readNews(): Promise<NewsItem[]> {
   try {
-    return JSON.parse(readFileSync(NEWS_FILE, "utf-8"));
+    const data = await kv.get<NewsItem[]>(NEWS_KEY);
+    return data ?? [];
   } catch {
     return [];
   }
 }
 
+export async function writeNews(items: NewsItem[]): Promise<void> {
+  await kv.set(NEWS_KEY, items.slice(0, MAX_ITEMS));
+}
+
 export async function GET() {
-  const news = readNews();
+  const news = await readNews();
   return NextResponse.json(news);
 }
 
@@ -29,8 +45,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Title and body required" }, { status: 400 });
     }
 
-    const news = readNews();
-    const newItem = {
+    const news = await readNews();
+    const newItem: NewsItem = {
       id: Date.now().toString(),
       date: date || new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" }),
       badge: badge || "News",
@@ -40,10 +56,28 @@ export async function POST(req: NextRequest) {
       sourceUrl: sourceUrl?.trim() || "",
     };
 
-    news.unshift(newItem); // add to top
-    writeFileSync(NEWS_FILE, JSON.stringify(news, null, 2));
+    news.unshift(newItem);
+    await writeNews(news);
 
     return NextResponse.json({ success: true, item: newItem });
+  } catch {
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
+}
+
+export async function DELETE(req: NextRequest) {
+  try {
+    const { password, id } = await req.json();
+
+    if (password !== process.env.ADMIN_PASSWORD) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const news = await readNews();
+    const filtered = news.filter((item) => item.id !== id);
+    await writeNews(filtered);
+
+    return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
