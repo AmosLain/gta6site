@@ -133,8 +133,7 @@ export default function NewsPage() {
       </section>
 
       <FAQ
-        title="NEWS FAQ"
-        subtitle="Common questions about GTA 6 updates and announcements"
+        heading="NEWS FAQ"
         items={faqItems}
       />
 

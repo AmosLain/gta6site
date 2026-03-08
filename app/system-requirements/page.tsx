@@ -100,8 +100,7 @@ export default function SystemRequirementsPage() {
       />
 
       <FAQ
-        title="SYSTEM REQUIREMENTS FAQ"
-        subtitle="Common questions about GTA 6 PC requirements"
+        heading="SYSTEM REQUIREMENTS FAQ"
         items={faqItems}
       />
 

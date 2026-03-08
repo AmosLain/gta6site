@@ -176,8 +176,7 @@ export default function GameplayPage() {
       </section>
 
       <FAQ
-        title="GAMEPLAY FAQ"
-        subtitle="The most common questions about how GTA 6 plays"
+        heading="GAMEPLAY FAQ"
         items={faqItems}
       />
 

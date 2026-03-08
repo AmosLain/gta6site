@@ -95,8 +95,7 @@ export default function PreOrderPage() {
       />
 
       <FAQ
-        title="PRE-ORDER FAQ"
-        subtitle="Everything you need to know before pre-ordering GTA 6"
+        heading="PRE-ORDER FAQ"
         items={faqItems}
       />
 

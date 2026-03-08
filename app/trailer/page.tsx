@@ -148,8 +148,7 @@ export default function TrailerPage() {
       />
 
       <FAQ
-        title="TRAILER FAQ"
-        subtitle="Common questions about the GTA 6 trailers"
+        heading="TRAILER FAQ"
         items={faqItems}
       />
 

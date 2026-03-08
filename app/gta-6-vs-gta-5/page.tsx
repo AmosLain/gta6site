@@ -173,8 +173,7 @@ export default function GTA6vsGTA5Page() {
       </section>
 
       <FAQ
-        title="GTA 6 VS GTA 5 FAQ"
-        subtitle="The most common questions about how the two games compare"
+        heading="GTA 6 VS GTA 5 FAQ"
         items={faqItems}
       />
 

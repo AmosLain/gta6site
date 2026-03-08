@@ -95,8 +95,7 @@ export default function PricePage() {
       />
 
       <FAQ
-        title="PRICE FAQ"
-        subtitle="Everything we know about GTA 6 pricing"
+        heading="PRICE FAQ"
         items={faqItems}
       />
 

@@ -110,8 +110,7 @@ export default function ReleaseDatePage() {
       />
 
       <FAQ
-        title="RELEASE DATE FAQ"
-        subtitle="Everything you need to know about GTA 6 launch date"
+        heading="RELEASE DATE FAQ"
         items={faqItems}
       />
 
