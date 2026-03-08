@@ -4,6 +4,7 @@ import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import EmailCapture from "@/components/EmailCapture";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 vs GTA 5 — Every Difference Explained (2026)",
@@ -112,6 +113,13 @@ const faqItems = [
 export default function GTA6vsGTA5Page() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/gta-6-vs-gta-5" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "GTA 6 vs GTA 5", url: "https://buygta6game.com/gta-6-vs-gta-5" },
+      ]} />
+
       <Hero
         title="GTA 6 VS GTA 5"
         subtitle="Map size, graphics, story, protagonists, online mode — every major difference between GTA 6 and one of the best-selling games in history."

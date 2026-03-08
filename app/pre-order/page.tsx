@@ -4,6 +4,7 @@ import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import EmailCapture from "@/components/EmailCapture";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 Pre-Order — How & Where to Pre-Order Grand Theft Auto 6",
@@ -80,6 +81,13 @@ const faqItems = [
 export default function PreOrderPage() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/pre-order" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "Pre-Order", url: "https://buygta6game.com/pre-order" },
+      ]} />
+
       <Hero
         title="GTA 6 PRE-ORDER"
         subtitle="Pre-orders are not open yet. Rockstar's marketing campaign starts Summer 2026 — that is when pre-orders are expected to go live."

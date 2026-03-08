@@ -4,6 +4,7 @@ import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import EmailCapture from "@/components/EmailCapture";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 Release Date — November 19, 2026 Official & Confirmed",
@@ -84,6 +85,13 @@ const faqItems = [
 export default function ReleaseDatePage() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/release-date" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "Release Date", url: "https://buygta6game.com/release-date" },
+      ]} />
+
       <Hero
         title="GTA 6 RELEASE DATE"
         subtitle="November 19, 2026 — Official and confirmed by Rockstar Games. PS5 and Xbox Series X|S only at launch."

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 PC System Requirements — Minimum & Recommended Specs (2026)",
@@ -85,6 +86,13 @@ const faqItems = [
 export default function SystemRequirementsPage() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/system-requirements" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "System Requirements", url: "https://buygta6game.com/system-requirements" },
+      ]} />
+
       <Hero
         title="GTA 6 SYSTEM REQUIREMENTS"
         subtitle="PC version not confirmed at launch. Console release November 19, 2026. PC expected 2027. Estimated specs based on leaks and expert analysis."

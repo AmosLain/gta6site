@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://buygta6game.com";
-  const lastModified = new Date("2026-03-06");
+  const lastModified = new Date("2026-03-09");
 
   return [
     {
@@ -60,7 +60,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/disclaimer`,
+      url: `${baseUrl}/map`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/characters`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/leaks`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/disclaimer`,,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,

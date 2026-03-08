@@ -10,9 +10,12 @@ export const NAV_LINKS = [
   { label: "Price", href: "/price" },
   { label: "Gameplay", href: "/gameplay" },
   { label: "Trailer", href: "/trailer" },
+  { label: "Map", href: "/map" },
+  { label: "Characters", href: "/characters" },
+  { label: "Leaks", href: "/leaks" },
   { label: "GTA 6 vs GTA 5", href: "/gta-6-vs-gta-5" },
   { label: "News", href: "/news" },
   { label: "System Requirements", href: "/system-requirements" },
 ];
 
-export const LAST_UPDATED = "March 6, 2026";
+export const LAST_UPDATED = "March 9, 2026";

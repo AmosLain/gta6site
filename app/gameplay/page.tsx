@@ -4,6 +4,7 @@ import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import EmailCapture from "@/components/EmailCapture";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 Gameplay — Confirmed Mechanics, Features & Details (2026)",
@@ -117,6 +118,13 @@ const faqItems = [
 export default function GameplayPage() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/gameplay" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "Gameplay", url: "https://buygta6game.com/gameplay" },
+      ]} />
+
       <Hero
         title="GTA 6 GAMEPLAY"
         subtitle="Every confirmed mechanic, feature, and gameplay detail from official trailers and Rockstar statements. Updated as new information drops."

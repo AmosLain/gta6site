@@ -4,6 +4,7 @@ import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import EmailCapture from "@/components/EmailCapture";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 Trailers — Official Trailer 1 & 2 Breakdown",
@@ -88,6 +89,13 @@ const faqItems = [
 export default function TrailerPage() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/trailer" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "Trailer", url: "https://buygta6game.com/trailer" },
+      ]} />
+
       <Hero
         title="GTA 6 OFFICIAL TRAILERS"
         subtitle="Two trailers released. 746 million combined views in 24 hours. Every confirmed detail, scene by scene."

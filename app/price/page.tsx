@@ -4,6 +4,7 @@ import CardSection from "@/components/CardSection";
 import FAQ from "@/components/FAQ";
 import EmailCapture from "@/components/EmailCapture";
 import LastUpdated from "@/components/LastUpdated";
+import { VideoGameSchema, FAQSchema, BreadcrumbSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "GTA 6 Price — How Much Will GTA 6 Cost in 2026?",
@@ -80,6 +81,13 @@ const faqItems = [
 export default function PricePage() {
   return (
     <>
+      <VideoGameSchema url="https://buygta6game.com/price" />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://buygta6game.com" },
+        { name: "Price", url: "https://buygta6game.com/price" },
+      ]} />
+
       <Hero
         title="GTA 6 PRICE"
         subtitle="No official price confirmed yet. Expected $79.99-$99.99 USD. Take-Two promises fair value for the most expensive game ever made."
