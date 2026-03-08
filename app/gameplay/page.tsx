@@ -70,7 +70,7 @@ const gameplayCards = [
   },
   {
     title: "Vehicles & Combat",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "🚗",
     content: [
       "Expanded vehicle roster — boats, planes, bikes",

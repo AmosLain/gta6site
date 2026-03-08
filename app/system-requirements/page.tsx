@@ -51,7 +51,7 @@ const specsCards = [
   },
   {
     title: "PC Release Info",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "📅",
     content: [
       "No PC release date confirmed by Rockstar",

@@ -59,7 +59,7 @@ const comparisonCards = [
   },
   {
     title: "Online Mode",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "🌐",
     content: [
       "GTA 6 Online: not officially detailed yet",
@@ -70,7 +70,7 @@ const comparisonCards = [
   },
   {
     title: "Price & Platforms",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "💰",
     content: [
       "GTA 6: $79.99–$99.99 expected — PS5 & Xbox only",

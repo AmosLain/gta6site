@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const priceCards = [
   {
     title: "Standard Edition",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "💰",
     content: [
       "Expected price: $79.99 USD",
@@ -25,7 +25,7 @@ const priceCards = [
   },
   {
     title: "Premium / Deluxe Edition",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "💎",
     content: [
       "Expected price: $99.99 - $109.99 USD",

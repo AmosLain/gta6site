@@ -47,7 +47,7 @@ const preOrderCards = [
   },
   {
     title: "When to Expect Pre-Orders",
-    badge: "Expected" as const,
+    badge: "Rumor" as const,
     icon: "📅",
     content: [
       "Summer 2026 — alongside marketing push",
