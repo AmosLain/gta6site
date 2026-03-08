@@ -104,8 +104,8 @@ export default function ReleaseDatePage() {
       </section>
 
       <CardSection
-        title="FULL TIMELINE"
-        subtitle="From announcement to launch — every key date in GTA 6 history"
+        heading="FULL TIMELINE"
+        subheading="From announcement to launch — every key date in GTA 6 history"
         cards={timelineCards}
       />
 

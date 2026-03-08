@@ -142,8 +142,8 @@ export default function TrailerPage() {
       </section>
 
       <CardSection
-        title="TRAILER BREAKDOWN"
-        subtitle="Everything confirmed across both official trailers"
+        heading="TRAILER BREAKDOWN"
+        subheading="Everything confirmed across both official trailers"
         cards={trailer1Cards}
       />
 

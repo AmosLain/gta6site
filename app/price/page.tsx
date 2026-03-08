@@ -89,8 +89,8 @@ export default function PricePage() {
       />
 
       <CardSection
-        title="PRICING BREAKDOWN"
-        subtitle="Expected editions and prices based on leaks and executive statements"
+        heading="PRICING BREAKDOWN"
+        subheading="Expected editions and prices based on leaks and executive statements"
         cards={priceCards}
       />
 

@@ -89,8 +89,8 @@ export default function PreOrderPage() {
       />
 
       <CardSection
-        title="WHERE TO PRE-ORDER"
-        subtitle="Pre-orders will be available on these platforms when they open"
+        heading="WHERE TO PRE-ORDER"
+        subheading="Pre-orders will be available on these platforms when they open"
         cards={preOrderCards}
       />
 

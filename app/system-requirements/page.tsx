@@ -94,8 +94,8 @@ export default function SystemRequirementsPage() {
       />
 
       <CardSection
-        title="ESTIMATED PC SPECS"
-        subtitle="Based on leaked playtesting footage, console hardware, and expert analysis — not official"
+        heading="ESTIMATED PC SPECS"
+        subheading="Based on leaked playtesting footage, console hardware, and expert analysis — not official"
         cards={specsCards}
       />
 
