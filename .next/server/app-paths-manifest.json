@@ -1,0 +1,8 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/scan-news/route": "app/api/scan-news/route.js",
+  "/api/news/route": "app/api/news/route.js",
+  "/news/page": "app/news/page.js",
+  "/system-requirements/page": "app/system-requirements/page.js"
+}
