@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const preOrderCards = [
   {
     title: "PlayStation Store",
-    badge: "Coming Soon" as const,
+    badge: "Rumor" as const,
     icon: "🎮",
     content: [
       "PS5 exclusive at launch",
@@ -25,7 +25,7 @@ const preOrderCards = [
   },
   {
     title: "Xbox Store",
-    badge: "Coming Soon" as const,
+    badge: "Rumor" as const,
     icon: "🟢",
     content: [
       "Xbox Series X|S only",
@@ -36,7 +36,7 @@ const preOrderCards = [
   },
   {
     title: "Amazon & Retailers",
-    badge: "Coming Soon" as const,
+    badge: "Rumor" as const,
     icon: "📦",
     content: [
       "Physical copies expected",

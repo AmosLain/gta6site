@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const specsCards = [
   {
     title: "Minimum PC Specs (Estimated)",
-    badge: "Estimated" as const,
+    badge: "Rumor" as const,
     icon: "💻",
     content: [
       "CPU: Intel Core i5-6600K / AMD Ryzen 5 1600",
@@ -26,7 +26,7 @@ const specsCards = [
   },
   {
     title: "Recommended PC Specs (Estimated)",
-    badge: "Estimated" as const,
+    badge: "Rumor" as const,
     icon: "🖥️",
     content: [
       "CPU: Intel Core i7-10700 / AMD Ryzen 7 5700X",
