@@ -22,9 +22,10 @@ function parseRSSDate(dateStr: string): Date {
 function extractItems(xml: string, sourceName: string) {
   const items: { title: string; link: string; date: Date; source: string; description: string }[] = [];
 
-  const itemMatches = xml.matchAll(/<item>([\s\S]*?)<\/item>/gi);
+  const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
+  let match: RegExpExecArray | null;
 
-  for (const match of itemMatches) {
+  while ((match = itemRegex.exec(xml)) !== null) {
     const itemXml = match[1];
 
     const titleMatch = itemXml.match(/<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/i);
