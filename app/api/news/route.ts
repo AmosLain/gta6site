@@ -4,7 +4,7 @@ import { kv } from "@vercel/kv";
 const NEWS_KEY = "gta6:news";
 const MAX_ITEMS = 100;
 
-export interface NewsItem {
+interface NewsItem {
   id: string;
   date: string;
   badge: string;
@@ -15,7 +15,7 @@ export interface NewsItem {
   autoAdded?: boolean;
 }
 
-export async function readNews(): Promise<NewsItem[]> {
+async function readNews(): Promise<NewsItem[]> {
   try {
     const data = await kv.get<NewsItem[]>(NEWS_KEY);
     return data ?? [];
@@ -24,7 +24,7 @@ export async function readNews(): Promise<NewsItem[]> {
   }
 }
 
-export async function writeNews(items: NewsItem[]): Promise<void> {
+async function writeNews(items: NewsItem[]): Promise<void> {
   await kv.set(NEWS_KEY, items.slice(0, MAX_ITEMS));
 }
 
@@ -48,7 +48,12 @@ export async function POST(req: NextRequest) {
     const news = await readNews();
     const newItem: NewsItem = {
       id: Date.now().toString(),
-      date: date || new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" }),
+      date:
+        date ||
+        new Date().toLocaleDateString("en-US", {
+          month: "long",
+          year: "numeric",
+        }),
       badge: badge || "News",
       title: title.trim(),
       body: body.trim(),
@@ -74,7 +79,7 @@ export async function DELETE(req: NextRequest) {
     }
 
     const news = await readNews();
-    const filtered = news.filter((item) => item.id !== id);
+    const filtered = news.filter((item: NewsItem) => item.id !== id);
     await writeNews(filtered);
 
     return NextResponse.json({ success: true });
